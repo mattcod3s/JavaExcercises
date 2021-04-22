@@ -13,9 +13,30 @@ public class Main
         processing.core.PApplet.runSketch( a, new MyVisual());		
 	}
 
+	public void Audio1() {
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new Audio1());	
+	}
+
+	public void Audio2() {
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new Audio2());	
+	}
+
+	public void Audio3() {
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new Audio3());	
+	}
+	
+	public void Test() {
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new Test());	
+	}
+
+
 	public static void main(String[] args)
 	{
 		Main main = new Main();
-		main.startUI();			
+		main.Test();			
 	}
 }
