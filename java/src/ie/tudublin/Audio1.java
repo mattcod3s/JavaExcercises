@@ -6,6 +6,7 @@ import ddf.minim.AudioPlayer;
 import ddf.minim.Minim;
 import processing.core.PApplet;
 
+
 public class Audio1 extends PApplet {
 
     Minim minim; // Connect to minim
@@ -14,10 +15,9 @@ public class Audio1 extends PApplet {
     AudioBuffer ab; // Samples
 
     float[] lerpedBuffer;
-
     public void settings() {
-        //size(1000, 1000, P3D);
-        fullScreen(P3D, SPAN); // Try this for full screen multiple monitor support :-) Be careful of exceptions!
+        size(512,512);
+        //fullScreen(P3D, SPAN); // Try this for full screen multiple monitor support :-) Be careful of exceptions!
     }
 
     float y = 200;
@@ -34,7 +34,7 @@ public class Audio1 extends PApplet {
         //ab = ai.mix; 
         colorMode(HSB);
         lerpedBuffer = new float[width];
-
+        
     }
 
     public void keyPressed() {
@@ -139,29 +139,29 @@ public class Audio1 extends PApplet {
                 rect(width / 2, height / 2, size, size);
                 break;
             }
+            // case 5:
+            // {
+            //     float r = 1f;
+            //     int numPoints = 3;
+            //     float thetaInc = TWO_PI / (float) numPoints;
+            //     strokeWeight(2);                
+            //     float lastX = width / 2, lastY = height / 2;
+            //     for(int i = 0 ; i < 1000 ; i ++)
+            //     {
+            //         float c = map(i, 0, 300, 0, 255) % 255.0f;
+            //         stroke(c, 255, 255, 100);
+            //         float theta = i * (thetaInc + lerpedAverage * 5);
+            //         float x = width / 2 + sin(theta) * r;
+            //         float y = height / 2 - cos(theta) * r;
+            //         r += 0.5f + lerpedAverage;
+            //         line(lastX, lastY, x, y);
+            //         lastX = x;
+            //         lastY = y;
+            //     }
+            //     // ??
+            //     break;
+            // }
             case 5:
-            {
-                float r = 1f;
-                int numPoints = 3;
-                float thetaInc = TWO_PI / (float) numPoints;
-                strokeWeight(2);                
-                float lastX = width / 2, lastY = height / 2;
-                for(int i = 0 ; i < 1000 ; i ++)
-                {
-                    float c = map(i, 0, 300, 0, 255) % 255.0f;
-                    stroke(c, 255, 255, 100);
-                    float theta = i * (thetaInc + lerpedAverage * 5);
-                    float x = width / 2 + sin(theta) * r;
-                    float y = height / 2 - cos(theta) * r;
-                    r += 0.5f + lerpedAverage;
-                    line(lastX, lastY, x, y);
-                    lastX = x;
-                    lastY = y;
-                }
-                // ??
-                break;
-            }
-            case 6:
             {
                 lights();
                 strokeWeight(2);

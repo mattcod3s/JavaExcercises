@@ -6,6 +6,7 @@ import ddf.minim.Minim;
 import ddf.minim.analysis.FFT;
 import processing.core.PApplet;
 
+
 public class Test extends PApplet {
 
     Minim minim;
@@ -64,6 +65,7 @@ public class Test extends PApplet {
         float halfHeight = height / 2;
         float average = 0;
         float sum = 0;
+        box(100);
         for (int i = 0; i < ab.size(); i++) {
             float c = map(i, 0, ab.size(), 180, 180);
             stroke(c, 255, 255);
@@ -105,7 +107,7 @@ public class Test extends PApplet {
             rect(x, height, w, -smoothedBands[i] / 2);
         }
 
-
-        ellipse(width / 2, 100 , (lerpedAverage * 500), (lerpedAverage * 500));
+        
+        //ellipse(width / 2, halfHeight + 100 , (lerpedAverage * 500), (lerpedAverage * 500));
     }
 }

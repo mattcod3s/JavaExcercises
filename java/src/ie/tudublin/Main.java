@@ -1,6 +1,5 @@
 package ie.tudublin;
 
-import example.CubeVisual;
 import example.MyVisual;
 import example.RotatingAudioBands;
 
@@ -21,11 +20,6 @@ public class Main
 	public void Audio2() {
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new Audio2());	
-	}
-
-	public void Audio3() {
-		String[] a = {"MAIN"};
-        processing.core.PApplet.runSketch( a, new Audio3());	
 	}
 	
 	public void Test() {
